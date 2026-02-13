@@ -24,8 +24,9 @@ public class SongGenerator
         string bogusLocale = locale switch
         {
             "en-US" => "en",
-            // Add more mappings if needed
-            _ => locale
+            "de-DE" => "de",
+            "uk-UA" => "en", // fallback to English for unsupported locales
+            _ => "en"
         };
 
         for (int i = 0; i < pageSize; i++)
